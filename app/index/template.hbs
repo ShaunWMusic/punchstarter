@@ -5,7 +5,7 @@
       <h2>{{ project.name }}</h2>
       <p>{{ project.description }}</p>
 
-      <p>100% Funded</p>
+      <p>{{percent project.earned project.goal}}% Funded</p>
       <p>${{ project.earned }} Raised</p>
       <p>${{ project.goal}} Goal</p>
     </div>

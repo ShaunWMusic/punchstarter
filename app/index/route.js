@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     return [
       {
         name: 'Fancy Iced Coffee',
-        description: 'Isaac probabl needs one of these',
+        description: 'Isaac probably needs one of these',
         goal: 1000000,
         earned: 20000,
       },
