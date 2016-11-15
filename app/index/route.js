@@ -1,8 +1,9 @@
 import Ember from 'ember';
+import config from 'punchstarter/config/environment';
 
 export default Ember.Route.extend({
   model() {
-    return fetch('https://tiy-tn-class-api-fall-16.herokuapp.com/api/punch/projects')
+    return fetch(`${config.apiUrl}/projects`)
       .then((r) => r.json());
   },
 });
