@@ -1,3 +1,21 @@
-{{outlet}}
-<h2>Hello New Project</h2>
-{{#link-to "project"}}Back{{/link-to}}
+<div class="container">
+  <h2>Make a New Project</h2>
+
+  <form {{action "saveForm" name goal description on="submit"}}>
+  {{!-- Vue would be <form @submit.prevent="saveForm(name, goal, description)"> --}}
+    {{!-- <h2>Name: {{ name }}</h2> --}}
+    <p>
+      {{input type="text" placeholder="Name" required=true value=name}}
+      {{!-- Vue would be <input type="text" placeholder="Name" v-model="name"> --}}
+    </p>
+    <p>
+      {{input type="text" placeholder="Goal" value=goal}}
+    </p>
+    <p>
+      {{textarea placeholder="Description" rows="8" cols="40" value=description}}
+    </p>
+
+    {{#link-to "project"}}Back{{/link-to}}
+    <button type="submit" name="button">Save</button>
+  </form>
+</div>
