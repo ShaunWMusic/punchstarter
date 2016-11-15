@@ -5,9 +5,9 @@
       <h2>{{ project.name }}</h2>
       <p>{{ project.description }}</p>
 
-      <p>{{percent project.earned project.goal}}% Funded</p>
-      <p>${{ project.earned }} Raised</p>
-      <p>${{ project.goal}} Goal</p>
+      <p>{{locale-number (percent project.earned project.goal)}}% Funded</p>
+      <p>${{locale-number project.earned }} Raised</p>
+      <p>${{locale-number project.goal}} Goal</p>
     </div>
     {{/each}}
   </div>
