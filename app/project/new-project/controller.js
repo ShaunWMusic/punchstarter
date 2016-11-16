@@ -1,19 +1,15 @@
 import Ember from 'ember';
-import config from 'punchstarter/config/environment';
 
 export default Ember.Controller.extend({
   actions: {
     saveForm(name, goal, description) {
       // Really cheap validation
       if (name && goal && description) {
-        // Save the new project
-        fetch(`${config.apiUrl}/projects`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, goal, description }),
-        }).then((r) => r.json())
+        // Creates a project record LOCALLY
+        const project = this.store.createRecord('project', { name, goal, description });
+
+        // Save the new project to the server
+        project.save()
           .then(() => {
             alert('Project saved!');
 
