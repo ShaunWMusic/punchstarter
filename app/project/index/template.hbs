@@ -15,6 +15,7 @@
           <td>{{ project.name }}</td>
           {{!-- localeNumber(project.goal) // Javascript equiv --}}
           <td>${{locale-number project.goal}}</td>
+          <td>{{#link-to "project.edit" project.id}}edit{{/link-to}}</td>
         </tr>
       {{/each}}
     </tbody>
