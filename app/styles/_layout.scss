@@ -7,6 +7,7 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
+  margin: 0 -1rem;
 
   // Modifier to center items in these grids
   &--centered {
@@ -15,8 +16,9 @@
 
   // Element within grid components
   &__item {
-    flex-basis: calc(100% / 4);
+    flex-basis: calc(100% / 4 + -2rem);
     flex-grow: 1;
+    margin: 1rem;
 
     // Modified grid__item that cannot be too wide
     &--max-half {
