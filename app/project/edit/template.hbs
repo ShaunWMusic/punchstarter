@@ -1,5 +1,18 @@
 <div class="container">
-  <h2>Editing Project: {{ model.name }}</h2>
+  <h2>Editing: {{ model.name }}</h2>
 
-  {{input value=model.name}}
-</div>
+    {{#simple-form onsubmit=(action "saveForm") as |formValues|}}
+      <h2>Name: {{ name }}</h2>
+      <p>
+        {{input type="text" placeholder="Name" require=true value=name}}
+      </p>
+    <p>
+      {{input type="text" placeholder="Goal" value=goal}}
+    </p>
+      <p>
+        {{textarea placeholder="Description" rows="8" cols="40" value=description}}
+      </p>
+      {{#link-to "project"}}Back{{/link-to}}
+      <button type="submit" name="button">Save</button>
+    {{/simple-form}}
+  </div>

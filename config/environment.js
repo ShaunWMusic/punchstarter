@@ -3,6 +3,10 @@
 module.exports = function (environment) {
   const ENV = {
     apiUrl: 'https://tiy-tn-class-api-fall-16.herokuapp.com/api/punch',
+    DS: {
+      host: 'https://tiy-tn-class-api-fall-16.herokuapp.com',
+      namespace: 'json-api/punch',
+    },
     modulePrefix: 'punchstarter',
     environment,
     rootURL: '/',
