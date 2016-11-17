@@ -2,9 +2,17 @@
   <h2>Make a New Project</h2>
 
   <form {{action "saveForm" name goal description on="submit"}}>
+<<<<<<< HEAD
     <h2>Name: {{ name }}</h2>
     <p>
       {{input type="text" placeholder="Name" require=true value=name}}
+=======
+  {{!-- Vue would be <form @submit.prevent="saveForm(name, goal, description)"> --}}
+    {{!-- <h2>Name: {{ name }}</h2> --}}
+    <p>
+      {{input type="text" placeholder="Name" required=true value=name}}
+      {{!-- Vue would be <input type="text" placeholder="Name" v-model="name"> --}}
+>>>>>>> 1683373361984fcb68159d88780f71213ef06834
     </p>
     <p>
       {{input type="text" placeholder="Goal" value=goal}}
@@ -12,8 +20,16 @@
     <p>
       {{textarea placeholder="Description" rows="8" cols="40" value=description}}
     </p>
+<<<<<<< HEAD
     {{#link-to "project"}}Back{{/link-to}}
     <button type="submit" name="button">Save</button>
   </form>
 
   </div>
+=======
+
+    {{#link-to "project"}}Back{{/link-to}}
+    <button type="submit" name="button">Save</button>
+  </form>
+</div>
+>>>>>>> 1683373361984fcb68159d88780f71213ef06834

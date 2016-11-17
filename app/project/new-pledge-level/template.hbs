@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Creating a new pledge level for {{ model.name }}</h1>
+
+  {{#simple-form onsubmit=(action "submit") as |inputs|}}
+    <p>{{input value=inputs.name placeholder="Name"}}</p>
+    <p>{{input value=inputs.price placeholder="Price"}}</p>
+    <p>{{textarea value=inputs.description placeholder="Description"}}</p>
+
+    <button>Submit</button>
+  {{/simple-form}}
+</div>

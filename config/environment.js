@@ -1,7 +1,11 @@
 /* jshint node: true */
 
 module.exports = function (environment) {
+<<<<<<< HEAD
   const ENV = {
+=======
+  var ENV = {
+>>>>>>> 1683373361984fcb68159d88780f71213ef06834
     apiUrl: 'https://tiy-tn-class-api-fall-16.herokuapp.com/api/punch',
     DS: {
       host: 'https://tiy-tn-class-api-fall-16.herokuapp.com',
@@ -11,6 +15,18 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+
+    'ember-simple-auth': {
+      routeAfterAuthentication: 'admin',
+
+      authorizer: 'authorizer:token',
+    },
+
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: 'https://tiy-tn-class-api-fall-16.herokuapp.com/api/token',
+      tokenPropertyName: 'access_token',
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

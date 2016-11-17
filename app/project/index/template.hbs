@@ -9,6 +9,7 @@
     </thead>
 
     <tbody>
+<<<<<<< HEAD
     {{#each model as |project|}}
       <tr>
         <td>{{ project.name }}</td>
@@ -19,3 +20,20 @@
     </tbody>
   </table>
   </div>
+=======
+      {{!-- model.forEach((project) => { /* Make tr in here */ }) --}}
+      {{#each model as |project|}}
+        <tr>
+          <td>{{ project.name }}</td>
+          {{!-- localeNumber(project.goal) // Javascript equiv --}}
+          <td>${{locale-number project.goal}}</td>
+          <td>
+            {{#link-to "project.manage" project}}Manage Pledge Levels{{/link-to}}
+            {{#link-to "project.edit" project.id}}edit{{/link-to}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+>>>>>>> 1683373361984fcb68159d88780f71213ef06834

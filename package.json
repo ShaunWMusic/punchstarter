@@ -40,6 +40,11 @@
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
     "ember-resolver": "^2.0.3",
+<<<<<<< HEAD
+=======
+    "ember-simple-auth": "1.1.0",
+    "ember-simple-auth-token": "1.2.0",
+>>>>>>> 1683373361984fcb68159d88780f71213ef06834
     "ember-simple-form": "2.1.0",
     "ember-welcome-page": "^1.0.3",
     "eslint-config-rtablada": "^3.1.0",

@@ -1,6 +1,7 @@
 <div class="container">
   <h2>Editing: {{ model.name }}</h2>
 
+<<<<<<< HEAD
     {{#simple-form onsubmit=(action "saveForm") as |formValues|}}
       <h2>Name: {{ name }}</h2>
       <p>
@@ -16,3 +17,23 @@
       <button type="submit" name="button">Save</button>
     {{/simple-form}}
   </div>
+=======
+  {{#simple-form startingValues=model onsubmit=(action "saveForm") as | formValues |}}
+  {{!-- Vue would be <form @submit.prevent="saveForm(name, goal, description)"> --}}
+    {{!-- <h2>Name: {{ name }}</h2> --}}
+    <p>
+      {{input type="text" placeholder="Name" required=true value=formValues.name}}
+      {{!-- Vue would be <input type="text" placeholder="Name" v-model="name"> --}}
+    </p>
+    <p>
+      {{input type="text" placeholder="Goal" value=formValues.goal}}
+    </p>
+    <p>
+      {{textarea placeholder="Description" rows="8" cols="40" value=formValues.description}}
+    </p>
+
+    {{#link-to "project"}}Back{{/link-to}}
+    <button type="submit" name="button">Save</button>
+  {{/simple-form}}
+</div>
+>>>>>>> 1683373361984fcb68159d88780f71213ef06834

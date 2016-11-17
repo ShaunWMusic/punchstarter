@@ -1,0 +1,16 @@
+<div class="container">
+  {{log model}}
+  <h2>{{ model.name }}</h2>
+  {{#link-to 'project.new-pledge-level' model.id}}Add New Pledge Level{{/link-to}}
+
+  <div class="grid">
+    {{#each model.pledgeLevels as |pledgeLevel|}}
+      <div class="grid__item">
+        <div class="card">
+          <h2>{{pledgeLevel.name}} - ${{locale-number pledgeLevel.price}}</h2>
+          <p>{{pledgeLevel.description}}</p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
