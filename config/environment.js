@@ -11,6 +11,18 @@ module.exports = function (environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
+
+    'ember-simple-auth': {
+      routeAfterAuthentication: 'admin',
+
+      authorizer: 'authorizer:token',
+    },
+
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: 'https://tiy-tn-class-api-fall-16.herokuapp.com/api/token',
+      tokenPropertyName: 'access_token',
+    },
+
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
