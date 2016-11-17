@@ -10,7 +10,15 @@ Router.map(function () {
   this.route('login');
   this.route('project', { path: '/projects' }, function () {
     this.route('new-project');
-    this.route('edit', { path: '/:id' });
+    this.route('edit', { path: '/:id/edit' });
+
+    this.route('manage', {
+      path: '/:project_id'
+    });
+
+    this.route('new-pledge-level', {
+      path: '/:project_id/new-pledge-level'
+    });
   });
 });
 
