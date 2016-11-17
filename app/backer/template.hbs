@@ -1,0 +1,19 @@
+<div class="container">
+  <h2>{{ model.name }}</h2>
+
+  <div class="grid">
+    <div class="grid__item">
+      <p>{{ model.description }}</p>
+    </div>
+    <div class="grid__item">
+      <ul class="collection">
+        {{#each model.pledgeLevels as |pledgeLevel|}}
+          <li class="collection__item">
+            <h3>{{ pledgeLevel.name }} - ${{locale-number pledgeLevel.price}}</h3>
+            <p>{{ pledgeLevel.description }}</p>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

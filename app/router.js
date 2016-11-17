@@ -20,6 +20,10 @@ Router.map(function () {
       path: '/:project_id/new-pledge-level'
     });
   });
+
+  this.route('backer', {
+    path: '/back/:project_id'
+  });
 });
 
 // Simliar to this route map if we were using vue

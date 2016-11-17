@@ -3,3 +3,16 @@
 @import "layout";
 @import "top-nav";
 @import "card";
+
+.collection {
+  border: 0.1rem #333 solid;
+  border-radius: 0.4rem;
+
+  > * + * {
+    border-top: 0.1rem #333 solid;
+  }
+
+  &__item {
+    padding: 0.4rem;
+  }
+}
